@@ -1,0 +1,1 @@
+# albert-launcher-window-switcher
