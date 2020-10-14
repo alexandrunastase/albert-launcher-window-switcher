@@ -32,7 +32,7 @@ def handleQuery(query):
                 defaultResults.append(Item(id="%s%s" % (__prettyname__, win.wm_class),
                                            icon=iconLookup(
                                                win.wm_class.split('.')[1].capitalize()),
-                                           text="%s" % (win.wm_class.split('.')[0].capitalize()),
+                                           text="%s" % (win.wm_class.split('.')[1].capitalize()),
                                            subtext=win.wm_name,
                                            actions=[ProcAction("Switch Window",
                                                                ["wmctrl", '-i', '-a', win.wid]),
@@ -53,7 +53,7 @@ def handleQuery(query):
                 results.append(Item(id="%s%s" % (__prettyname__, win.wm_class),
                                        icon=iconLookup(
                                            win.wm_class.split('.')[1].capitalize()),
-                                       text="%s" % (win.wm_class.split('.')[0].capitalize()),
+                                       text="%s" % (win.wm_class.split('.')[1].capitalize()),
                                        subtext=win.wm_name,
                                        actions=[ProcAction("Switch Window",
                                                            ["wmctrl", '-i', '-a', win.wid]),
